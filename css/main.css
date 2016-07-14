@@ -177,25 +177,37 @@ img {
 	background: url('../assets/potatoline.png') center center no-repeat;
 	background-size: auto 105px;
 	}
-.testwrap {
-	width:100%;
-	margin: 10em 0;
-	display:flex;
-	justify-content:space-between;
-	}
+
 .testimony {
 	box-sizing:border-box;
 	padding:1em;
-	width:50em;
-	}
-#focus {
+	width:80em;
 	position:relative;
+	margin:auto;
+	}
+blockquote {
+	width:80%;
+	margin:auto;
+	font-size:2em;
+	line-height:2.5em;
+	font-weight:400;
+	}
+
+cite {
+	display:block;
+	box-sizing:border-box;
+	width:100%;
+	border-top:20px solid transparent;
+	border-image: url('../assets/border.png') 400 25 stretch;
+	font-size:.75em;
+	font-weight:700;
+	text-align:center;
 	}
 #testleft, #testright {
-	width:10%;
-	height:10%;
+	width:4em;
+	height:4em;
 	position:absolute;
-	top:50%;
+	top:12em;
 	background-size:contain;
 	cursor: pointer;
 	}
@@ -206,33 +218,6 @@ img {
 #testright {
 	right:0;
 	background: url('../assets/focusright.png') center center no-repeat;
-	}
-#focus blockquote {
-	width:80%;
-	}
-blockquote {
-	margin:auto;
-	font-size:2em;
-	line-height:2.5em;
-	font-weight:400;
-	}
-#left {
-	margin-left:-25em;
-	opacity: 0.5;
-	}
-#right {
-	margin-right:-25em;
-	opacity:0.5;
-	}
-cite {
-	display:block;
-	box-sizing:border-box;
-	width:100%;
-	border-top:20px solid transparent;
-	border-image: url('../assets/border.png') 400 25 stretch;
-	font-size:.75em;
-	font-weight:700;
-	text-align:center;
 	}
 .column-holder {
 	width:80%;
@@ -286,16 +271,19 @@ button:hover {
 #potato-lite {
 	background: url('../assets/potatosmall.png') bottom center no-repeat;
 	background-size: 70% auto;
+	image-rendering: crisp-edges;
 	}
 #potato-pro {
 	border-left: 1px solid #aaa;
 	border-right: 1px solid #aaa;
 	background: url('../assets/potato3.png') bottom center no-repeat;
 	background-size: 70% auto;
+	image-rendering: crisp-edges;
 	}
 #potato-team {
 	background: url('../assets/potato1.png') bottom center no-repeat;
 	background-size: 100% auto;
+	image-rendering: crisp-edges;
 	}
 #copyright {
 	margin:1em;

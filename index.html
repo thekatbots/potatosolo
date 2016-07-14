@@ -7,7 +7,7 @@
 	<meta name="description" content="building a website to learn modern html and css">
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:300,500,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/main.css">
-	<script type="text/javascript" src="js/rafpolyfill.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script type="text/javascript" src="js/smoothscroll.js"></script>
 </head>
 
@@ -17,8 +17,8 @@
 		<nav>
 			<ul>
 				<li><a href="#about">About</a></li>
-				<li><a href="#features">Features</a></li>
 				<li><a href="#nutrition">Nutrition</a></li>
+				<li><a href="#features">Features</a></li>
 				<li><a href="#testimonials">Testimonials</a></li>
 				<li><a href="#buy-now">Buy Now</a></li>
 			</ul>
@@ -75,25 +75,17 @@
 		<h1>100% Customer Satisfaction!</h1>
 		<h2><span>BEHOLD</span> my shitty placeholder graphics!</h2>
 	</hgroup>
-	<div class="testwrap">
-	<div class="testimony" id="left">
-		<blockquote>I was a skeptic at first, but when I tried <span>Potato<sup>TM</sup></span> for the first time, my life completely changed! I'm a different person now. Everything is better with <span>Potato<sup>TM</sup></span>. 
-		<cite><span>Jane Doe</span>, single mom</cite>
-		</blockquote>
-	</div>
-	<div class="testimony focus" id="focus">
+
+
+	<div class="testimony">
 		<div id="testleft"></div>
-		<blockquote><span>Potato<sup>TM</sup></span> Team gave my group the resources they needed to finish a huge project. It's surprisingly easy to set up and energizing to use!
+		<blockquote id="testcenter"><span>Potato<sup>TM</sup></span> Team gave my group the resources they needed to finish a huge project. It's surprisingly easy to set up and energizing to use!
 			<cite><span>Jake Smith</span>, businessman</cite>
 		</blockquote>
 		<div id="testright"></div>
 	</div>
-	<div class="testimony" id="right">
-		<blockquote>when I needed it most, <span>Potato<sup>TM</sup></span> Lite came through. It can get you out of some pretty tricky situations! I never leave home without one.
-			<cite><span>Jade Harley</span>, professional jogger</cite>
-		</blockquote>
-	</div>
-	</div>
+
+	
 	<!-- more testimonies
 		<div class="testimony" id="john">
 		<blockquote><span>Potato<sup>TM</sup></span> is just about the best thing ever. Who even needs anything else? Nobody who's got their shit together, that's for sure.
@@ -101,6 +93,7 @@
 		</blockquote>
 	</div>
 	-->
+<script type="text/javascript" src="js/quoterot.js"></script>
 </section>
 	
 <section id="buy-now">
