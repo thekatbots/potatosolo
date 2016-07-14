@@ -5,7 +5,7 @@
 	<title></title>
 	<meta charset="utf-8">
 	<meta name="description" content="building a website to learn modern html and css">
-	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,200,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:300,500,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/main.css">
 	<script type="text/javascript" src="js/rafpolyfill.js"></script>
 	<script type="text/javascript" src="js/smoothscroll.js"></script>
@@ -75,20 +75,24 @@
 		<h1>100% Customer Satisfaction!</h1>
 		<h2><span>BEHOLD</span> my shitty placeholder graphics!</h2>
 	</hgroup>
-	<div class="testimony" id="jane">
+	<div class="testwrap">
+	<div class="testimony" id="left">
 		<blockquote>I was a skeptic at first, but when I tried <span>Potato<sup>TM</sup></span> for the first time, my life completely changed! I'm a different person now. Everything is better with <span>Potato<sup>TM</sup></span>. 
 		<cite><span>Jane Doe</span>, single mom</cite>
 		</blockquote>
 	</div>
-	<div class="testimony focus" id="jake">
+	<div class="testimony focus" id="focus">
+		<div id="testleft"></div>
 		<blockquote><span>Potato<sup>TM</sup></span> Team gave my group the resources they needed to finish a huge project. It's surprisingly easy to set up and energizing to use!
 			<cite><span>Jake Smith</span>, businessman</cite>
 		</blockquote>
+		<div id="testright"></div>
 	</div>
-	<div class="testimony" id="jade">
+	<div class="testimony" id="right">
 		<blockquote>when I needed it most, <span>Potato<sup>TM</sup></span> Lite came through. It can get you out of some pretty tricky situations! I never leave home without one.
 			<cite><span>Jade Harley</span>, professional jogger</cite>
 		</blockquote>
+	</div>
 	</div>
 	<!-- more testimonies
 		<div class="testimony" id="john">
@@ -106,36 +110,36 @@
 	</hgroup>
 	<div class="column-holder">
 		<div class="column" id="potato-lite">
-			<p><span>Potato<sup>TM</sup></span> Lite</p>
+			<h2><span>Potato<sup>TM</sup></span> Lite</h2>
 			<ul>
 				<li>Small and compact</li>
 				<li>Highly portable</li>
 				<li>Unapolagetically delicious</li>
 			</ul>
-			<button>$9.99</button>
-			<img src="assets\potatosmall.png" alt="pile of potato(tm) products">
+			<p>Starting at $9.99</p>
+			<button>BUY NOW</button>
 		</div>
 		<div class="column" id="potato-pro">
-			<p><span>Potato<sup>TM</sup></span> Pro</p>
+			<h2><span>Potato<sup>TM</sup></span> Pro</h2>
 			<ul>
 				<li>Highly portable</li>
 				<li>Easily sliceable</li>
 				<li>Unapolagetically delicious</li>
 				<li>More nutrition</li>
 			</ul>
-			<button>$19.99</button>
-			<img src="assets\potato.png" alt="pile of potato(tm) products">
+			<p>Starting at $19.99</p>
+			<button>BUY NOW</button>
 		</div>
 		<div class="column" id="potato-team">
-			<p><span>Potato<sup>TM</sup></span> Team</p>
+			<h2><span>Potato<sup>TM</sup></span> Team</h2>
 			<ul>
 				<li>Ideal for group projects</li>
 				<li>Easily sliceable</li>
 				<li>Unapolagetically delicious</li>
 				<li>Maximum nutrition</li>
 			</ul>
-			<button>$49.99</button>
-			<img src="assets\potato1-1.png" alt="pile of potato(tm) products">
+			<p>Starting at $39.99</p>
+			<button>BUY NOW</button>
 		</div>
 	</div>
 </section>	

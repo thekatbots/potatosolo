@@ -10,7 +10,7 @@ body {
 	color:#555;
 	font-size:.625em;
 	}
-	
+/**/	
 /*====Fixed Responsive Navigation Bar====*/
 	
 header {
@@ -25,6 +25,7 @@ header {
 	align-items: flex-start;
 	position:fixed;
 	top:0;
+	z-index:999;
 	}
 #logo {
 	display:flex;
@@ -67,11 +68,13 @@ nav ul li a:hover {
 	border:1px solid rgba(255,255,255,1);
 	}
 
+/**/
 /*====Scrolling Content Sections====*/
 
 section {
 	height:100vh;
 	min-height:60em;
+	position:relative;
 	overflow: hidden;
 	}
 #splash {
@@ -108,15 +111,16 @@ footer {
 	font-size:1.25em;
 	}
 
-/*====Content Styles====*/
+/**/
+/*====Universal Content Styles====*/
+
 #splash hgroup {
 	padding-top:100px;
 	}
 hgroup{
 	width:70%;
 	max-width:25em;
-	padding:1em;
-	margin:auto;
+	margin:4em auto;
 	font-size:3.5em;
 	text-align:center;
 	}
@@ -132,12 +136,12 @@ h1 span {
 	}
 h2 {
 	font-size:.75em;
-	font-weight:200;
+	font-weight:300;
 	margin:0;
 	padding:0;
 	}	
 h2 span {
-	font-weight:400;
+	font-weight:500;
 	}
 sup {
 	font-size:.35em;
@@ -147,33 +151,63 @@ a {
 	text-decoration:none;
 	}
 .centerpiece {
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
 	width:75%;
 	height:50%;
 	margin:auto;
 	}
 img {
-	height:100%;
-	width:100%;
+	height:90%;
+	width:90%;
+	margin:0 5%;
 	object-fit: contain;
 	image-rendering:crisp-edges;
 	}
+/**/
+/*====Special Content Styles====*/
+
 .potatoline {
 	width:100%;
-	height:100px;
+	height:105px;
+	position:absolute;
+	top:35em;
 	background: url('../assets/potatoline.png') center center no-repeat;
-	background-size:contain;
-}
+	background-size: auto 105px;
+	}
+.testwrap {
+	width:100%;
+	margin: 10em 0;
+	display:flex;
+	justify-content:space-between;
+	}
 .testimony {
 	box-sizing:border-box;
 	padding:1em;
-	width:50%;
-	float:left;
+	width:50em;
 	}
-.focus {
-	background: url('../assets/focusleft.png') center left no-repeat, url('../assets/focusright.png') center right no-repeat;
-	background-size:10%;
+#focus {
+	position:relative;
 	}
-.focus blockquote {
+#testleft, #testright {
+	width:10%;
+	height:10%;
+	position:absolute;
+	top:50%;
+	background-size:contain;
+	cursor: pointer;
+	}
+#testleft {
+	left:0;
+	background: url('../assets/focusleft.png') center center no-repeat;
+	}
+#testright {
+	right:0;
+	background: url('../assets/focusright.png') center center no-repeat;
+	}
+#focus blockquote {
 	width:80%;
 	}
 blockquote {
@@ -182,12 +216,12 @@ blockquote {
 	line-height:2.5em;
 	font-weight:400;
 	}
-#jane {
-	margin-left:-25%;
+#left {
+	margin-left:-25em;
 	opacity: 0.5;
 	}
-#jade {
-	margin-right:-25%;
+#right {
+	margin-right:-25em;
 	opacity:0.5;
 	}
 cite {
@@ -209,39 +243,34 @@ cite {
 .column {
 	box-sizing:border-box;
 	position:relative;
-	padding:2em;
+	padding: 0 2em;
 	width:33%;
 	height:50em;
 	}
+.column h2 {
+	font-size:3em;
+	text-align:center;
+}
 .column p {
 	text-align:center;
-	font-size:3em;
-	}
-.column p span {
-	font-weight:400;
-	letter-spacing:-.05em;
-	}
-.column li {
-	font-size:2em;
-	list-style: circle;
-	}
-.column img {
-	position: absolute;
-	bottom:0px;
+	font-size:1.2em;
+	position:absolute;
+	bottom:20em;
 	left:0;
 	right:0;
-	margin:auto;
-	max-width:75%;
-	max-height:33%;
+	}
+.column li {
+	font-size:1.8em;
+	list-style: circle;
 	}
 button {
 	display:block;
 	position: absolute;
-	bottom:35%;
+	bottom:10em;
 	left:50%;
-	width:6em;
-	margin-left:-3em;
-	padding:20px;
+	width:8em;
+	margin-left:-4em;
+	padding:10px;
 	background: rgba(255,255,255,0.25);
 	border:1px solid #9A7952;
 	color:#9A7952;
@@ -252,14 +281,22 @@ button {
 	cursor: pointer;
 	}	
 button:hover {
-	background: rgba(255,255,255,0.5);
+	background: rgba(255,255,255,0.75);
 	}
-#potato-lite {}
+#potato-lite {
+	background: url('../assets/potatosmall.png') bottom center no-repeat;
+	background-size: 70% auto;
+	}
 #potato-pro {
 	border-left: 1px solid #aaa;
 	border-right: 1px solid #aaa;
+	background: url('../assets/potato3.png') bottom center no-repeat;
+	background-size: 70% auto;
 	}
-#potato-team {}
+#potato-team {
+	background: url('../assets/potato1.png') bottom center no-repeat;
+	background-size: 100% auto;
+	}
 #copyright {
 	margin:1em;
 	}
