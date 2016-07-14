@@ -1,0 +1,275 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	}
+body {
+	padding:0;
+	background-color: #aaa;
+	font-family:'work sans', sans-serif;
+	font-weight:200;
+	color:#555;
+	font-size:.625em;
+	}
+	
+/*====Fixed Responsive Navigation Bar====*/
+	
+header {
+	box-sizing:border-box;
+	height:70px;
+	width:100%;
+	padding:10px 2em;
+	background: rgba(0,0,0,0.25);
+	font-size:2em;
+	display:flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	position:fixed;
+	top:0;
+	}
+#logo {
+	display:flex;
+	}
+#logo h1 {
+	color:#fff;
+	font-size:1.75em;
+	font-weight:400;
+	margin:auto;
+	padding:5px 10px 5px 40px;
+	background: url('../assets/potatocon.png') center left no-repeat;
+	}
+header nav {
+	display:flex;
+	flex-grow:1;
+	justify-content:flex-end;
+	}
+nav ul {
+	display:flex;
+	padding:0;
+	margin:5px 0;
+	}
+nav ul li {
+	display:flex;
+	flex-direction:row;
+	flex-flow: nowrap;
+	padding:0;
+	list-style:none;
+	}
+nav ul li a {
+	box-sizing:border-box;
+	padding:10px;
+	margin:0 10px;
+	font-size:.75em;
+	text-transform:uppercase;
+	border:1px solid rgba(0,0,0,0);
+	border-radius:40px;
+	}
+nav ul li a:hover {
+	border:1px solid rgba(255,255,255,1);
+	}
+
+/*====Scrolling Content Sections====*/
+
+section {
+	height:100vh;
+	min-height:60em;
+	overflow: hidden;
+	}
+#splash {
+	color:#fff;
+	background:linear-gradient(#9A7952, #BA9972 20%, #DAB982 80%, #BA9972);}
+#about {
+	background:#ddd url('../assets/blur.png') top left no-repeat;
+	background-size:cover;
+	}
+#nutrition {
+	color:#fff;
+	background:#7DA862 url('../assets/blur2.png') bottom left no-repeat;
+	background-size:contain;
+	}
+#features {
+	color: saddlebrown;
+	background: url('../assets/mashed.png') bottom left no-repeat, url('../assets/fried.png') bottom right no-repeat, #E3D9A0;
+	background-size:30%;
+	}
+#testimonials {
+	background:#fff url('../assets/potatoconbg.png') bottom center no-repeat;
+	background-size:cover;
+	overflow:hidden;
+	}
+#buy-now {
+	background:#ddd;
+	}
+footer {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	background:#fff;
+	font-weight:400;
+	font-size:1.25em;
+	}
+
+/*====Content Styles====*/
+#splash hgroup {
+	padding-top:100px;
+	}
+hgroup{
+	width:70%;
+	max-width:25em;
+	padding:1em;
+	margin:auto;
+	font-size:3.5em;
+	text-align:center;
+	}
+h1 {
+	font-weight:400;
+	letter-spacing: -.06em;
+	margin:.5em;
+	padding:0;
+	}
+h1 span {
+	font-weight:700;
+	letter-spacing:0em;
+	}
+h2 {
+	font-size:.75em;
+	font-weight:200;
+	margin:0;
+	padding:0;
+	}	
+h2 span {
+	font-weight:400;
+	}
+sup {
+	font-size:.35em;
+	}
+a { 
+	color: #FFF;
+	text-decoration:none;
+	}
+.centerpiece {
+	width:75%;
+	height:50%;
+	margin:auto;
+	}
+img {
+	height:100%;
+	width:100%;
+	object-fit: contain;
+	image-rendering:crisp-edges;
+	}
+.potatoline {
+	width:100%;
+	height:100px;
+	background: url('../assets/potatoline.png') center center no-repeat;
+	background-size:contain;
+}
+.testimony {
+	box-sizing:border-box;
+	padding:1em;
+	width:50%;
+	float:left;
+	}
+.focus {
+	background: url('../assets/focusleft.png') center left no-repeat, url('../assets/focusright.png') center right no-repeat;
+	background-size:10%;
+	}
+.focus blockquote {
+	width:80%;
+	}
+blockquote {
+	margin:auto;
+	font-size:2em;
+	line-height:2.5em;
+	font-weight:400;
+	}
+#jane {
+	margin-left:-25%;
+	opacity: 0.5;
+	}
+#jade {
+	margin-right:-25%;
+	opacity:0.5;
+	}
+cite {
+	display:block;
+	box-sizing:border-box;
+	width:100%;
+	border-top:20px solid transparent;
+	border-image: url('../assets/border.png') 400 25 stretch;
+	font-size:.75em;
+	font-weight:700;
+	text-align:center;
+	}
+.column-holder {
+	width:80%;
+	margin:auto;
+	display:flex;
+	flex-direction:row;
+	}
+.column {
+	box-sizing:border-box;
+	position:relative;
+	padding:2em;
+	width:33%;
+	height:50em;
+	}
+.column p {
+	text-align:center;
+	font-size:3em;
+	}
+.column p span {
+	font-weight:400;
+	letter-spacing:-.05em;
+	}
+.column li {
+	font-size:2em;
+	list-style: circle;
+	}
+.column img {
+	position: absolute;
+	bottom:0px;
+	left:0;
+	right:0;
+	margin:auto;
+	max-width:75%;
+	max-height:33%;
+	}
+button {
+	display:block;
+	position: absolute;
+	bottom:35%;
+	left:50%;
+	width:6em;
+	margin-left:-3em;
+	padding:20px;
+	background: rgba(255,255,255,0.25);
+	border:1px solid #9A7952;
+	color:#9A7952;
+	font-family:'work sans', sans-serif;
+	font-size:2em;
+	font-weight:700;
+	border-radius:35px;
+	cursor: pointer;
+	}	
+button:hover {
+	background: rgba(255,255,255,0.5);
+	}
+#potato-lite {}
+#potato-pro {
+	border-left: 1px solid #aaa;
+	border-right: 1px solid #aaa;
+	}
+#potato-team {}
+#copyright {
+	margin:1em;
+	}
+footer nav ul {
+	padding: 1em 1em 1em 0;
+	font-size:1.5em;
+	}
+footer nav li a {
+	color:#777;
+	}
+footer nav li a:hover {
+	border:1px solid #777;
+	}
