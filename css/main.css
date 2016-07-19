@@ -18,7 +18,6 @@ header {
 	height:70px;
 	width:100%;
 	padding:10px 2em;
-	background: rgba(0,0,0,0.25);
 	font-size:2em;
 	display:flex;
 	flex-flow: row wrap;
@@ -79,7 +78,7 @@ section {
 	}
 #splash {
 	color:#fff;
-	background:linear-gradient(#9A7952, #BA9972 20%, #DAB982 80%, #BA9972);}
+	background:linear-gradient(#9A7952 100px, #BA9972 30%, #DAB982 80%, #BA9972);}
 #about {
 	background:#ddd url('../assets/blur.png') top left no-repeat;
 	background-size:cover;
@@ -114,13 +113,10 @@ footer {
 /**/
 /*====Universal Content Styles====*/
 
-#splash hgroup {
-	padding-top:100px;
-	}
 hgroup{
 	width:70%;
 	max-width:25em;
-	margin:4em auto;
+	margin:5em auto 3em;
 	font-size:3.5em;
 	text-align:center;
 	}
@@ -177,7 +173,25 @@ img {
 	background: url('../assets/potatoline.png') center center no-repeat;
 	background-size: auto 105px;
 	}
-
+#nutrients {
+	display:flex;
+	justify-content:space-between;
+	position: absolute;
+	bottom: 5%;
+	width:80%;
+	left:10%;
+	right:10%;
+	text-align:center;
+	font-size:1.5em;
+	}
+#nutrients div {
+	flex-basis:1;
+	width:25%;
+	}
+#testwrap {
+	display:flex;
+	width:100%;
+	}
 .testimony {
 	box-sizing:border-box;
 	padding:1em;
@@ -190,9 +204,14 @@ blockquote {
 	margin:auto;
 	font-size:2em;
 	line-height:2.5em;
-	font-weight:400;
+	font-weight:300;
+	opacity:1;
+	transition-property: opacity;
+	transition-duration: .25s;
 	}
-
+blockquote span {
+	font-weight:500;
+	}
 cite {
 	display:block;
 	box-sizing:border-box;
@@ -203,6 +222,15 @@ cite {
 	font-weight:700;
 	text-align:center;
 	}
+#focus {}
+#offleft {
+	opacity:0.5;
+	margin-left:-40em;
+}
+#offright {
+	opacity:0.5;
+	margin-right:-40em;
+}
 #testleft, #testright {
 	width:4em;
 	height:4em;
@@ -218,6 +246,9 @@ cite {
 #testright {
 	right:0;
 	background: url('../assets/focusright.png') center center no-repeat;
+	}
+.vanish {
+	opacity:0;
 	}
 .column-holder {
 	width:80%;
@@ -298,3 +329,30 @@ footer nav li a {
 footer nav li a:hover {
 	border:1px solid #777;
 	}
+
+@media (min-width:1260px) {
+	.column p {
+		bottom: 24em;
+		}
+	button {
+		bottom: 12em;
+		}
+}
+
+@media (min-width:1570px) {
+	.column p {
+		bottom: 27em;
+		}
+	button {
+		bottom: 14em;
+		}
+}
+
+@media (min-width:1900px) {
+	.column p {
+		bottom: 30em;
+		}
+	button {
+		bottom: 16em;
+		}
+}

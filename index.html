@@ -12,8 +12,8 @@
 </head>
 
 <body>
-<header>
-		<div id="logo"><h1>Potato<sup>TM</sup></h1></div>
+<header id="header">
+		<a href="#splash"><div id="logo"><h1>Potato<sup>TM</sup></h1></div></a>
 		<nav>
 			<ul>
 				<li><a href="#about">About</a></li>
@@ -24,6 +24,8 @@
 			</ul>
 		</nav>
 </header>
+
+<script type="text/javascript" src="js/headerbg.js"></script>
 	
 <section id="splash">
 	<hgroup>
@@ -54,7 +56,26 @@
 		<h2>The majority of carbohydrates in <span>Potato<sup>TM</sup></span> are complex carbohydrates, your body's main energy source.</h2>
 	</hgroup>
 	<div class="centerpiece">
-		<img src="assets/potato.png" alt="pile of potato(tm) products">
+		<img src="assets/potato4.png" style="height:80%; width:80%; padding: 0 5%; position:absolute;" alt="potato under analysis">
+		<img src="assets/infolines.svg" style="height:70%; width:70%; padding:0 10%; position:absolute; bottom:15%;" alt="linear graphics">
+		<div id="nutrients">
+			<div>
+				<h1>110</h1>
+				<p>calories</p>
+			</div>
+			<div>
+				<h1>26g</h1>
+				<p>carbohydrates</p>
+			</div>
+			<div>
+				<h1>3g</h1>
+				<p>protien</p>
+			</div>
+			<div>
+				<h1>0g</h1>
+				<p>fat</p>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -75,14 +96,22 @@
 		<h1>100% Customer Satisfaction!</h1>
 		<h2><span>BEHOLD</span> my shitty placeholder graphics!</h2>
 	</hgroup>
+<div id="testwrap">
+	<div class="testimony" id="offleft">
+		<blockquote id="leftside">I was a skeptic at first, but when I tried <span>Potato<sup>TM</sup></span> for the first time, my life completely changed! I'm a different person now. Everything is better with <span>Potato<sup>TM</sup></span>. <cite><span>Jane Doe</span>, single mom</cite>
+		</blockquote>
+	</div>
 
-
-	<div class="testimony">
+	<div class="testimony" id="focus">
 		<div id="testleft"></div>
-		<blockquote id="testcenter"><span>Potato<sup>TM</sup></span> Team gave my group the resources they needed to finish a huge project. It's surprisingly easy to set up and energizing to use!
-			<cite><span>Jake Smith</span>, businessman</cite>
+		<blockquote id="testcenter"><span>Potato<sup>TM</sup></span> Team gave my group the resources they needed to finish a huge project. It's surprisingly easy to set up and energizing to use!<cite><span>Jake Smith</span>, businessman</cite>
 		</blockquote>
 		<div id="testright"></div>
+	</div>
+	
+	<div class="testimony" id="offright">
+		<blockquote id="rightside">When I needed it most, <span>Potato<sup>TM</sup></span> Lite came through. It can get you out of some pretty tricky situations! I never leave home without one.<cite><span>Jade Harley</span>, professional jogger</cite>
+		</blockquote>
 	</div>
 
 	
@@ -93,6 +122,8 @@
 		</blockquote>
 	</div>
 	-->
+	
+</div>
 <script type="text/javascript" src="js/quoterot.js"></script>
 </section>
 	
