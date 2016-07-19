@@ -7,23 +7,47 @@ var quote = [
 	
 	"<span>Potato<sup>TM</sup></span> is just about the best thing ever. Who even needs anything else? Nobody who's got their shit together, that's for sure.<cite><span>John Jacobmeier</span>, tactical hobo</cite>"
 	]
-
-var attrib = [
-	"<span>Jane Doe</span>, single mom",
-	"<span>Jake Smith</span>, businessman",
-	"<span>Jade Harley</span>, professional jogger",
-	"<span>John Jacobmeier</span>, tactical hobo"
-	]
+function vanish(){
+	document.getElementById('leftside').classList.add('vanish');
+	document.getElementById('testcenter').classList.add('vanish');
+	document.getElementById('rightside').classList.add('vanish');
+	}
+function shiftup(){
+	movequote = quote.shift(); //Pull the top one
+    quote.push(movequote); //And add it back to the end
 	
-  /*this is the time in milliseconds adjust to suit*/
+	document.getElementById('leftside').innerHTML = quote[0];
+	document.getElementById('testcenter').innerHTML = quote[1];
+	document.getElementById('rightside').innerHTML = quote[2];
+	}
+function shiftdown(){
+	movequote = quote.pop(); //Pull the bottom one
+    quote.unshift(movequote); //And add it back to the front
+	
+	document.getElementById('leftside').innerHTML = quote[0];
+	document.getElementById('testcenter').innerHTML = quote[1];
+	document.getElementById('rightside').innerHTML = quote[2];
+	}
+function unvanish(){
+	document.getElementById('leftside').classList.remove('vanish');
+	document.getElementById('testcenter').classList.remove('vanish');
+	document.getElementById('rightside').classList.remove('vanish');
+	}
 
 function rotatequote()
 	{
-	thequote = quote.shift(); //Pull the top one
-    quote.push(thequote); //And add it back to the end
-	
-    document.getElementById('testcenter').innerHTML = thequote;
+	vanish();
+	window.setTimeout('shiftup()', 250);
+	window.setTimeout('unvanish()', 250);
 	}
-document.getElementById('testleft').addEventListener("click", rotatequote);
+	
+function unrotatequote()
+	{
+	vanish();
+	window.setTimeout('shiftdown()', 250);
+	window.setTimeout('unvanish()', 250);
+	}
+	
+document.getElementById('testleft').addEventListener("click", unrotatequote);
 document.getElementById('testright').addEventListener("click", rotatequote);
 
