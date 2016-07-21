@@ -9,31 +9,35 @@
 	<link rel="stylesheet" href="css/main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script type="text/javascript" src="js/smoothscroll.js"></script>
+	<script src="js/hambaga.js"></script>
 </head>
 
 <body>
-<header id="header">
-		<a href="#splash"><div id="logo"><h1>Potato<sup>TM</sup></h1></div></a>
-		<nav>
-			<ul>
-				<li><a href="#about">About</a></li>
-				<li><a href="#nutrition">Nutrition</a></li>
-				<li><a href="#features">Features</a></li>
-				<li><a href="#testimonials">Testimonials</a></li>
-				<li><a href="#buy-now">Buy Now</a></li>
-			</ul>
-		</nav>
-</header>
+<div class="wrapper">
 
-<script type="text/javascript" src="js/headerbg.js"></script>
-	
+<a href="#splash"><div id="logo"><h1>Potato<sup>TM</sup></h1></div></a>
+		
+	<nav class="top">
+		<ul>
+			<li><a href="#about">About</a></li>
+			<li><a href="#nutrition">Nutrition</a></li>
+			<li><a href="#features">Features</a></li>
+			<li><a href="#testimonials">Testimonials</a></li>
+			<li><a href="#buy-now">Buy Now</a></li>
+		</ul>
+	</nav>
+
+	<div class="hambaga"></div>
+
+<main>
+
 <section id="splash">
 	<hgroup>
 		<h1>"Sweet, Nutritious, and Delicious"</h1>
 		<h2>The key to happiness is hidden in the <span>Potato<sup>TM</sup></span></h2>
 	</hgroup>
 	<div class="centerpiece">
-	<img src="assets/potato1.png" alt="pile of potato(tm) products">
+		<img src="assets/potato1.png" alt="pile of potato(tm) products">
 	</div>
 </section>	
 
@@ -41,7 +45,7 @@
 	<a id="about"></a>
 	<hgroup>
 		<h1>Different Shapes and Sizes</h1>
-		<h2><span>Potato<sup>TM</sup></span> comes in many different unique shapes and sizes. <a href="">Find the one</a> that fits your personal preferences.</h2>
+		<h2><span>Potato<sup>TM</sup></span> comes in many different unique shapes and sizes. <a href="#buy-now">Find the one</a> that fits your personal preferences.</h2>
 	</hgroup>
 	<div class="potatoline"></div>
 	<div class="centerpiece">
@@ -56,8 +60,10 @@
 		<h2>The majority of carbohydrates in <span>Potato<sup>TM</sup></span> are complex carbohydrates, your body's main energy source.</h2>
 	</hgroup>
 	<div class="centerpiece">
-		<img src="assets/potato4.png" style="height:80%; width:80%; padding: 0 5%; position:absolute;" alt="potato under analysis">
-		<img src="assets/infolines.svg" style="height:70%; width:70%; padding:0 10%; position:absolute; bottom:15%;" alt="linear graphics">
+		<img src="assets/potato4.png" alt="potato under analysis">
+		<div id="lines">
+			<img src="assets/infolines.svg">
+		</div>
 		<div id="nutrients">
 			<div>
 				<h1>110</h1>
@@ -167,6 +173,10 @@
 		</div>
 	</div>
 </section>	
+
+</main>
+
+</div>
 	
 <footer>
 	<div id="copyright">

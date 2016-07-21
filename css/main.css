@@ -1,3 +1,6 @@
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css');
+
+
 html, body {
 	height: 100%;
 	margin: 0;
@@ -6,28 +9,21 @@ body {
 	padding:0;
 	background-color: #aaa;
 	font-family:'work sans', sans-serif;
-	font-weight:200;
-	color:#555;
+	font-weight:300;
+	color:#777;
 	font-size:.625em;
 	}
 /**/	
 /*====Fixed Responsive Navigation Bar====*/
 	
-header {
-	box-sizing:border-box;
+#logo {
 	height:70px;
-	width:100%;
 	padding:10px 2em;
 	font-size:2em;
-	display:flex;
-	flex-flow: row wrap;
-	align-items: flex-start;
 	position:fixed;
 	top:0;
 	z-index:999;
-	}
-#logo {
-	display:flex;
+	float:left;
 	}
 #logo h1 {
 	color:#fff;
@@ -37,14 +33,16 @@ header {
 	padding:5px 10px 5px 40px;
 	background: url('../assets/potatocon.png') center left no-repeat;
 	}
-header nav {
-	display:flex;
-	flex-grow:1;
-	justify-content:flex-end;
+nav.top {
+	position:fixed;
+	font-size:2em;
+	top:0;
+	right:0;
+	z-index:999;
 	}
 nav ul {
 	display:flex;
-	padding:0;
+	padding:15px;
 	margin:5px 0;
 	}
 nav ul li {
@@ -66,15 +64,30 @@ nav ul li a {
 nav ul li a:hover {
 	border:1px solid rgba(255,255,255,1);
 	}
+.hambaga {
+	display:none;
+	z-index:999;
+ 	cursor: pointer;
+ 	position:fixed;
+ 	top:5px;
+ 	right:7px;
+	}
+.hambaga:before {
+	content: '\f0c9';
+	color:#fff;
+	font: 42px fontawesome;
+	text-shadow:1px 1px 1px #541;
+	}
 
 /**/
 /*====Scrolling Content Sections====*/
 
 section {
 	height:100vh;
-	min-height:60em;
+	min-height:80em;
 	position:relative;
 	overflow: hidden;
+	clear:both;
 	}
 #splash {
 	color:#fff;
@@ -116,9 +129,12 @@ footer {
 hgroup{
 	width:70%;
 	max-width:25em;
-	margin:5em auto 3em;
+	margin:3em auto 3em;
 	font-size:3.5em;
 	text-align:center;
+	}
+#splash hgroup {
+	margin:5em auto 3em;
 	}
 h1 {
 	font-weight:400;
@@ -147,57 +163,93 @@ a {
 	text-decoration:none;
 	}
 .centerpiece {
+	font-size:3.5em;
 	position:absolute;
 	left:0;
 	right:0;
 	bottom:0;
-	width:75%;
+	width:70%;
+	max-width:25em;
 	height:50%;
 	margin:auto;
 	}
-img {
-	height:90%;
-	width:90%;
-	margin:0 5%;
-	object-fit: contain;
-	image-rendering:crisp-edges;
+.centerpiece img {
+	max-width:100%;
+	max-height:100%;
 	}
 /**/
 /*====Special Content Styles====*/
 
 .potatoline {
 	width:100%;
-	height:105px;
-	position:absolute;
-	top:35em;
+	height:120px;
+	margin-top:-5em;
 	background: url('../assets/potatoline.png') center center no-repeat;
-	background-size: auto 105px;
+	background-size: auto 100%;
 	}
+#about .centerpiece img {
+	position:absolute;
+	margin:auto auto;
+	top:0;
+	bottom:0;
+	}
+	
+#nutrition .centerpiece {
+	max-width:600px;
+	max-height:475px;
+	bottom:25px;
+	}	
+#nutrition .centerpiece>img {
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	height:70%;
+	margin:auto auto;
+	}
+#lines {
+	position:absolute;
+	width:100%;
+	height:75%;
+	bottom:100px;
+	}	
+#lines img {
+	width:90%;
+	left:5%;
+	position:absolute;
+	bottom:0;
+	}
+
 #nutrients {
 	display:flex;
 	justify-content:space-between;
 	position: absolute;
-	bottom: 5%;
-	width:80%;
-	left:10%;
-	right:10%;
+	bottom: 10px;
+	width:90%;
+	left:5%;
+	height:90px;
 	text-align:center;
-	font-size:1.5em;
+	font-size:.5em;
 	}
 #nutrients div {
 	flex-basis:1;
-	width:25%;
+	width:15%;
 	}
+	
 #testwrap {
 	display:flex;
 	width:100%;
+	align-items: flex-start;
+	align-content: flex-start;
+	vertical-align: top;
 	}
 .testimony {
+	align-self:flex-start;
+	vertical-align:top;
 	box-sizing:border-box;
 	padding:1em;
 	width:80em;
 	position:relative;
-	margin:auto;
 	}
 blockquote {
 	width:80%;
@@ -210,6 +262,7 @@ blockquote {
 	transition-duration: .25s;
 	}
 blockquote span {
+	color:#555;
 	font-weight:500;
 	}
 cite {
@@ -271,13 +324,17 @@ cite {
 	text-align:center;
 	font-size:1.2em;
 	position:absolute;
-	bottom:20em;
 	left:0;
 	right:0;
 	}
 .column li {
 	font-size:1.8em;
-	list-style: circle;
+	list-style:none;
+	}
+.column li::before {
+	content: '\2022';
+	padding:5px;
+	margin-left:-18px;
 	}
 button {
 	display:block;
@@ -301,7 +358,7 @@ button:hover {
 	}
 #potato-lite {
 	background: url('../assets/potatosmall.png') bottom center no-repeat;
-	background-size: 70% auto;
+	background-size: 60% auto;
 	image-rendering: crisp-edges;
 	}
 #potato-pro {
@@ -313,7 +370,7 @@ button:hover {
 	}
 #potato-team {
 	background: url('../assets/potato1.png') bottom center no-repeat;
-	background-size: 100% auto;
+	background-size: 110% auto;
 	image-rendering: crisp-edges;
 	}
 #copyright {
@@ -329,6 +386,86 @@ footer nav li a {
 footer nav li a:hover {
 	border:1px solid #777;
 	}
+
+.wrapper {
+  	display: inherit;
+	}
+main {
+  flex: 1;
+  background: #eee;
+  box-shadow: 0 0 5px rgba(0,0,0,1);
+  transform: translate3d(0,0,0);
+  transition: transform .3s;
+  overflow:hidden;
+  z-index:10;
+}
+
+@media (max-width:850px) {
+.wrapper {
+  	display: flex;
+	}
+nav.top {
+  	position: fixed;
+  	right:0;
+	top:20px;
+  	width: 220px;
+	z-index:0;
+	}
+nav ul {
+	flex-direction:column;
+	}
+nav ul li {
+	z-index:0;
+	}
+.hambaga {
+	display:block;
+	}
+main.isOpen {
+  	transform: translate3d(-220px,0,0);
+	}
+main section {
+  	transform: translateX(0);
+  	transition:.3s;
+	}
+main.isOpen section {
+  	transform: translateX(220px);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:720px) {
+	.column h2 {
+		font-size:1.8em;
+	}
+	.column li {
+		font-size:1em;
+	}
+}
+
+@media (max-width:920px) {
+	.column h2 {
+		font-size:2.5em;
+	}
+	.column li {
+		font-size:1.5em;
+	}
+}
+
+
+@media (max-width:975px) {
+	.potatoline{
+		height:60px;
+		background-size: auto 60px;
+	}
+}
 
 @media (min-width:1260px) {
 	.column p {
