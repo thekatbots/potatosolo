@@ -7,10 +7,14 @@
 	<meta name="description" content="building a website to learn modern html and css">
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:300,500,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/twentytwenty.css">
+	<!-- <link rel="stylesheet" href="css/foundation.css"> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script type="text/javascript" src="js/smoothscroll.js"></script>
-	<script src="js/hambaga.js"></script>
-</head>
+	<script type="text/javascript" src="js/hambaga.js"></script>
+	<script type="text/javascript" src="js/jquery.event.move.js"></script>
+	<script type="text/javascript" src="js/jquery.twentytwenty.js"></script>
+	</head>
 
 <body>
 <div class="wrapper">
@@ -91,9 +95,15 @@
 		<h1>Easily Transformable!</h1>
 		<h2>Because of its unique structure, <span>Potato<sup>TM</sup></span> is easily usable and transformable in way way you can think of.</h2>
 	</hgroup>
-	<div class="centerpiece">
+	<div id="potatoform" class='twentytwenty-container'>
+		<img src="assets/potato4.png">
 		<img src="assets/chips.png">
 	</div>
+	<script type="text/javascript">
+		$(window).load(function() {
+  		$("#potatoform").twentytwenty();
+		});
+	</script>
 </section>
 
 <section id="testimonials">
